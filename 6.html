@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.6</h1>
+    <h3 id="input1"></h3>
+    <h3 id="input2"></h3>
+    <h3 id="output"></h3>
+
+    <script>
+        const input1 = prompt('input pertama');
+        const input2 = prompt('input kedua')
+        const hasil = [];
+        for(let i = input1; i <= input2; i++){
+            hasil.push(i)
+        }
+
+        document.getElementById('input1').innerHTML = "Input : " + input1;
+        document.getElementById('input2').innerHTML = "Input : " + input2;
+        document.getElementById('output').innerHTML = "Output : " + hasil.toString();
+    </script>
+</body>
+</html>

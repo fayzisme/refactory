@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.5</h1>
+    <h3 id="input"></h3>
+    <h3 id="output"></h3>
+
+    <script>
+        const input = prompt('Berapa Usiamu ?');
+        if (input < 9){
+            document.getElementById('output').innerHTML = "Output : Semua Usia";   
+        }
+        else if (input >= 9 && input < 13){
+            document.getElementById('output').innerHTML = "Output : Bimbingan Orang Tua";
+        }
+        else if (input >= 13 && input < 21){
+            document.getElementById('output').innerHTML = "Output : Remaja";
+        }
+        else if (input >= 21){
+            document.getElementById('output').innerHTML = "Output : Dewasa";
+        }
+        document.getElementById('input').innerHTML = "Input :" + input;
+    </script>
+</body>
+</html>

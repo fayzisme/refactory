@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.3</h1>
+    <h3 id="input"></h3>
+    <h3 id="output"></h3>
+
+    <script>
+        const input = prompt();
+        if (input % 2 == 1){
+            document.getElementById('output').innerHTML = "Output : ganjil";   
+          } 
+        else {
+            document.getElementById('output').innerHTML = "Output : genap"; 
+        }
+        document.getElementById('input').innerHTML = "Input :" + input;
+    </script>
+</body>
+</html>

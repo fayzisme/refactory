@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.8</h1>
+    <h4 id="hasil"></h4>
+
+    <script>
+        var text = '';
+        const cetakBilanganGanjil = () => {
+            for(let i = 1; i <= 1000;i++){
+                if(i % 2 == 1){
+                    if(i % 5 == 0){
+                        text += i + " Ganjil Kelipatan Lima<br>"
+                    }
+                    else{
+                        text += i + " Ganjil<br>";
+                    }
+                }
+
+                if(i % 2 == 0){
+                    if(i % 5 == 0 && i % 100 != 0){
+                        text += i + " Genap Kelipatan Lima<br>"
+                    }
+                    else if(i % 100 == 0){
+                        text += i + " Genap Kelipatan Seratus<br>"
+                    }
+                    else{
+                        text += i + " Genap<br>";
+                    }
+                }
+            }
+            document.getElementById('hasil').innerHTML=text;
+        }
+        cetakBilanganGanjil();
+    </script>
+</body>
+</html>
