@@ -17,15 +17,14 @@
             {name: 'Mengkudu', price: 4000},
             {name: 'Kiwi', price: 6000}
         ];
-        const gabungBalik = (input) => {
-            const stuff = input.split('');
-            const hasil = input.split('').reverse();
-            stuff.push(...hasil);
-            return stuff.join('');
+        const ambilData = (input) => {
+            var tampil = '';
+            input.map((el) => {
+               tampil += el.name + ': ' + el.price + '<br>';
+            })
+            document.getElementById('output').innerHTML = tampil;
         }
-        console.log(gabungBalik(input));
-        document.getElementById('input').innerHTML = 'input :' + input;
-        document.getElementById('output').innerHTML = 'output :' + gabungBalik(input);
+        ambilData(fruits);
     </script>
 </body>
 </html>
