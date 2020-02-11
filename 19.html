@@ -10,15 +10,14 @@
     <h1>Soal no.19</h1>
 
     <script>
-        function jumlah(input){
-            if (input === 0) {
-                return 0;
-            } 
-            else {
-                return input + jumlah(--input)
-             }
+        const input = parseInt(prompt());
+        const rekursif = function(index){
+            console.log(index)
+            if(index > 1){
+                rekursif(--index);
+            }
         }
-        console.log(jumlah(6));
+        rekursif(input);
     </script>
 </body>
 </html>
