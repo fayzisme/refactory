@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.14</h1>
+    <h4 id="output"></h4>
+
+    <script>
+        const people = [
+            { id: 1, name: 'Udin', age: 12 },
+            { id: 2, name: 'Wati', age: 51 },
+            { id: 3, name: 'Budi', age: 34 },
+            { id: 4, name: 'Agus', age: 16 },
+            { id: 5, name: 'Sari', age: 19 },
+            { id: 6, name: 'Ririn', age: 21 },
+        ]
+        const saringData = (input) => {
+            const tampil = [];
+            input.forEach(el => {
+                if (el.age < 21) {
+                    tampil.push(el);
+                }
+            });
+            console.log(tampil);
+            const hasil = JSON.stringify(tampil);
+            document.getElementById('output').innerHTML = hasil;
+        }
+        saringData(people);
+    </script>
+</body>
+</html>

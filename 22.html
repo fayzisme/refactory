@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.22</h1>
+
+    <script>
+        function celciusToFahrenheit(celsius){
+            const cToFahr = celsius * 9 / 5 + 32;
+            return cToFahr;
+        }
+
+        function celciusToKelvin(celsius){
+            const cToKelv = celsius +  273.15;
+            return cToKelv;
+        }
+
+        function fahrenheitToCelcius(fahrenheit){
+            const fToCel = (fahrenheit - 32) * 5 / 9;
+            return fToCel;
+        }
+
+        function fahrenheitToKelvin(fahrenheit){
+            const fToKel = (fahrenheit - 32) * 5 / 9 + 273.15;
+            return fToKel.toFixed(3);
+        }
+
+        function kelvinToCelcius(kelvin){
+            const kToCel = kelvin -  273.15;
+            return kToCel;
+        }
+
+        function kelvinToFahrenheit(kelvin){
+            const kToFahr = (kelvin - 273.15) * 9 / 5 + 32;
+            return kToFahr.toFixed(2);
+        }
+
+        console.log(
+            celciusToKelvin(80),
+            kelvinToCelcius(298.15),
+            fahrenheitToCelcius(36.5),
+            celciusToFahrenheit(22),
+            fahrenheitToKelvin(234),
+            kelvinToFahrenheit(203)
+            );
+
+    </script>
+</body>
+</html>
