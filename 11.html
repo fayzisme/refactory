@@ -7,15 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Soal no.9</h1>
+    <h1>Soal no.10</h1>
     <h4 id="hasil"></h4>
 
     <script>
-        const input = prompt('Masukkan kata');
-        const balikKata = (input) => {
-            return input.split(' ').reverse().join(' ');
+        const fruits = ['Jeruk', 'Pepaya', 'Jambu', 'Anggur', 'Melon'];
+        const tambahKata = (...input) => {
+            fruits.splice(2,1)
         }
-        document.getElementById('hasil').innerHTML = 'hasil :' + balikKata(input);
+        tambahKata();
+        console.log(fruits);
+        document.getElementById('hasil').innerHTML = 'hasil :' + fruits;
     </script>
 </body>
 </html>

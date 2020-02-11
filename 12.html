@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.10</h1>
+    <h4 id="input"></h4>
+    <h4 id="output"></h4>
+
+    <script>
+        const input = prompt();
+        const gabungBalik = (input) => {
+            const stuff = input.split('');
+            const hasil = input.split('').reverse();
+            stuff.push(...hasil);
+            return stuff.join('');
+        }
+        console.log(gabungBalik(input));
+        document.getElementById('input').innerHTML = 'input :' + input;
+        document.getElementById('output').innerHTML = 'output :' + gabungBalik(input);
+    </script>
+</body>
+</html>
