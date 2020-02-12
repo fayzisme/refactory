@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Soal no.15</h1>
+    <h3 id="output"></h3>
 
     <script>
-        function jumlah(){
-            const input = prompt('Masukkan angka untuk dijumlah !')
+      function jumlah() {
+        const tampung = [];
+        for (let i = 0; i < 100; i++) {
+          const input = prompt("Masukkan ANGKA untuk dijumlah !");
+          if (input == "=") {
+            i += 100;
+          } else {
+            parseInt(input);
+            tampung.push(input);
+          }
         }
-        jumlah();
-        
+        return tampung.reduce((a, b) => {
+          return Number(a) + Number(b);
+        });
+      }
+      document.getElementById("output").innerHTML =
+        "Hasil penjumlahan : " + jumlah();
     </script>
-</body>
+  </body>
 </html>
