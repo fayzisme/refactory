@@ -15,9 +15,13 @@
         const input = ['Jakarta', 'Aceh', 'Malang', 'Medan', 'Bontang', 'Jogja', 'Jakarta', 'Bandung', 'Malang', 'Solo', 'Palembang', 'Bandung'];
         document.getElementById('input').innerHTML = 'input : ' + input;
         function removeDuplicates(array) {
-            return array.filter((a, b) => array.indexOf(a) === b)
+            // method filter hanya mengembalikan nilai yang mempunyai nilai true
+            return array.filter((a, b) => {
+                console.log(a);
+                console.log(b);
+                return array.indexOf(a) === b
+            })
         };
-        console.log(removeDuplicates(input));
         document.getElementById('output').innerHTML = 'output : ' + removeDuplicates(input) + '.';
     </script>
 </body>
