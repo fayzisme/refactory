@@ -7,18 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Soal no.23</h1>
+    <h3>Soal no.23 simple FIFO</h3>
 
-    <input type="text" id="awal" name="awal">
-    <input type="submit" value="Submit">
-    <br>
-    <br>
-    <input type="text" id="akhir" name="akhir">
-    <input type="submit" value="Submit">
-
-    <h4 id="hasil"></h4>
+    <div id="mainDiv" style="background-color: silver; 
+                        width:410px; padding: 20px; text-align: left;">
+        Input : <input type="text" id="txtInput" value="">
+        <button onclick="doQueueAdd()">In</button> 
+        <br /><br />
+        <button onclick="doQueueGet()">Out</button> >>>
+        &nbsp;&nbsp;
+        <span id="queueResult"></span>
+    </div>             
 
     <script>
-    </script>
+        const queue = [];
+ 
+        function stackAdd(valueToAdd) {
+        
+            queue.push(valueToAdd);
+        }
+        
+        function stackGet() {
+            const retrievedQueueValue = queue.shift();
+            if(retrievedQueueValue) {
+            return retrievedQueueValue;
+            }
+            else {
+            return "Queue is empty.";
+            }
+        }
+
+        function doQueueAdd() {
+          const inputValue = document.getElementById('txtInput').value;
+          if(inputValue) {
+            stackAdd(inputValue);
+            console.log(queue);
+            document.getElementById('txtInput').value = "";
+          }
+        }
+           
+        function doQueueGet() {
+          const returnValue = stackGet();
+          document.getElementById('queueResult').innerHTML = returnValue;
+          console.log(queue);
+        }
+
+      </script>   
+     </body> 
 </body>
 </html>

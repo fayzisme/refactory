@@ -7,9 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Soal no.24</h1>
+    <h1>Soal no.24 Simple LIFO</h1>
+
+    <div id="mainDiv" style="background-color: silver; 
+                        width:410px; padding: 20px; text-align: left;">
+        Input : <input type="text" id="txtInput" value="">
+        <button onclick="dostackAdd()">In</button> 
+        <br /><br />
+        <button onclick="dostackGet()">Out</button> >>>
+        &nbsp;&nbsp;
+        <span id="stackResult"></span>
+    </div>             
 
     <script>
-    </script>
+        const stack = [];
+ 
+        function stackAdd(valueToAdd) {
+        
+            stack.push(valueToAdd);
+        }
+        
+        function stackGet() {
+            if(stack && stack.length) {
+            const last = stack[stack.length - 1];
+            stack.splice(stack.length - 1, 1);
+            return last;
+            }
+            else {
+            return "stack is empty.";
+            }
+        }
+
+        function dostackAdd() {
+          const inputValue = document.getElementById('txtInput').value;
+          if(inputValue) {
+            stackAdd(inputValue);
+            console.log(stack);
+            document.getElementById('txtInput').value = "";
+          }
+        }
+           
+        function dostackGet() {
+          const returnValue = stackGet();
+          document.getElementById('stackResult').innerHTML = returnValue;
+          console.log(stack);
+        }
+
+      </script>   
 </body>
 </html>
