@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Soal no.20</h1>
+    <h2>Mengubah basis data</h2>
+    <h4 id="value"></h4>
+    <h4 id="input"></h4>
+    <h4 id="output"></h4>
+
+    <script>
+    const value = parseInt(prompt('Masukkan angka ! misal : 10'));
+    const form = prompt('Masukkan basis bilangan awal ! misal : dec/bin/oct/hex');
+    const to = prompt('Masukkan basis bilangan akhir ! misal : dec/bin/oct/hex');
+    
+    const numConvert = (value, form, to) => {
+        if(form == 'dec'){
+            form = 10;
+        }
+        else if (form == 'bin'){
+            form = 2;
+        }
+        else if (form == 'oct'){
+            form = 8;
+        }
+        else if (form == 'hex'){
+            form = 16;
+        }
+
+        if(to == 'dec'){
+            to = 10;
+        }
+        else if (to == 'bin'){
+            to = 2;
+        }
+        else if (to == 'oct'){
+            to = 8;
+        }
+        else if (to == 'hex'){
+            to = 16;
+        }
+        
+        return parseInt(value + '', form)
+        .toString(to);
+    }
+
+
+    document.getElementById('value').innerHTML = "Angka : " + value;
+    document.getElementById('input').innerHTML = `Hasil ubah dari '${form}'`;
+    document.getElementById('output').innerHTML = `ke '${to}' adalah <span style ="text-transform:capitalize">${numConvert(value,form,to)}</span>`;
+    </script>
+</body>
+</html>
