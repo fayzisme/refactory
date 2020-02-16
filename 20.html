@@ -13,13 +13,12 @@
        const typeofMap = {
         'undefined' : 'Undefined',
         'boolean'   : 'Boolean',
-        'number'    : 'Integer',
+        'number'    : 'Number',
         'string'    : 'String',
         'function'  : 'Function',
         'Undefined' : 'Undefined',
         'Null'      : 'Null',
-        'Array'     : 'Array',
-        '1.25'      : 'Float',
+        'Array'     : 'Array'
         }
             
        const dataType = ( x ) => {
@@ -28,16 +27,29 @@
             if ( x === undefined ) { return 'Undefined'; }
                 
             type     = typeof( x );
+            console.log(type);
             type_str = typeofMap[ type ];
-            if ( type_str ) { return type_str; }
-                
-            type = {}.toString.call( x ).slice( 8, -1 );
-            return typeofMap[ type ]
+            if ( type_str && type_str != 'Number') {
+                return type_str; 
+            }
+            else if (type_str == 'Number'){
+                if(Number(x) === x && x % 1 === 0) {
+                    return 'Integer'
+                }
+                else {
+                    return 'Float'
+                }
+            }
+            else {
+                type = {}.toString.call( x ).slice( 8, -1 );
+                return typeofMap[ type ]
                 || ( x.propertyIsEnumerable(0) && x.length !== undefined
                 ? 'Array' : 'Object'
                 );
+            };
+            
         }
-        console.log(dataType(''));
+        console.log(dataType([]));
     </script>
 </body>
 </html>
